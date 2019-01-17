@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class SaleTax {
+	
+		public static void main(String[] args)
+		{
+		
+			final double STATE_TAX_RATE = 0.055, COUNTY_TAX_RATE = 0.02;  
+	        
+			double price;  
+			
+			double tax;    
+			
+			double total;  
+			
+			String item;   
+
+			Scanner lanvykeyboard = new Scanner(System.in);
+
+			System.out.print("Item description:  "); 
+			
+			item = lanvykeyboard.nextLine(); 
+			
+			System.out.print("Item price:  $"); 
+			
+			price = lanvykeyboard.nextDouble(); 
+
+			tax = price * STATE_TAX_RATE;     
+			
+			total = price + tax;     
+			
+			System.out.println("Item purchased: " + item);
+	        
+			System.out.println("Price                 $" + price);
+			
+			System.out.println("Tax                   $" + tax);
+			
+			System.out.println("Total                 $" + total);
+			
+			lanvykeyboard.close();
+		}
+	}
